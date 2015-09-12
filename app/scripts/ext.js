@@ -1,12 +1,12 @@
 'use strict';
-
+console.log('sdsd');
 (function(ext) {
 
   ext.passcode = function(question, code, callback) {
-    console.log("Question and Code are ", question,  code);
+    console.log('Question and Code are ', question,  code);
     //returning locally
 
-    callback("Input for "+question);
+    callback('Input for '+question);
 //    $.ajax({
 //      url: 'http://localhost',
 //      success: function( result ) {
@@ -22,7 +22,7 @@
   ext.answer = function(answer, callback) {
     console.log(answer);
 
-    callback("answer submission successful");
+    callback('answer submission successful');
 //    $.ajax({
 //      url: 'http://localhost',
 //      success: function( result ) {
@@ -43,6 +43,7 @@
 
   var regInt = setInterval(function(){
     try{
+      var ScratchExtensions = ScratchExtensions || {};
       ScratchExtensions.register('Scratch Competition', descriptor, ext);
       clearInterval(regInt);
     }catch (e){
